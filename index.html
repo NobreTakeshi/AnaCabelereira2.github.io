@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Cabelereira e Estética</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Dourado elegante */
+            --secondary-color: #333;  /* Preto suave */
+            --bg-light: #f9f9f9;
+            --text-color: #555;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3, h4, h5, .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .nav-link {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-left: 15px;
+        }
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section (Banner Principal) */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Botox Capilar 2.jpg'); /* Usando uma das fotos como fundo */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #b89628;
+            color: white;
+        }
+
+        /* Serviços */
+        .section-padding {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .service-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .price {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        /* Galeria Processo vs Resultado */
+        .gallery-item {
+            margin-bottom: 30px;
+        }
+        .gallery-img {
+            width: 100%;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .gallery-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 50px 0 20px;
+        }
+        footer h4 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        footer p {
+            color: #bbb;
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ana Cabelereira e Estética</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <h1>Sua beleza em boas mãos</h1>
+            <p>Transformação, cuidado e autoestima. Venha realçar o que há de melhor em você.</p>
+            <a href="https://wa.me/5521998356217" class="btn btn-custom" target="_blank">Agendar Horário</a>
+        </div>
+    </header>
+
+    <section id="servicos" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços e Preços</h2>
+                <p>Qualidade profissional com preços justos.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-card">
+                        <img src="Progressiva 2.jpg" class="service-img" alt="Resultado Progressiva">
+                        <div class="service-body">
+                            <h3>Progressiva</h3>
+                            <p class="price">R$ 130,00</p>
+                            <p>Alisamento perfeito, redução de volume e brilho intenso.</p>
+                            <a href="https://wa.me/5521998356217?text=Olá, gostaria de agendar uma Progressiva" class="btn btn-outline-dark mt-auto">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-card">
+                        <img src="Permanente Afro 2.jpg" class="service-img" alt="Resultado Permanente Afro">
+                        <div class="service-body">
+                            <h3>Permanente Afro</h3>
+                            <p class="price">R$ 150,00</p>
+                            <p>Definição de cachos e volume controlado com técnica especializada.</p>
+                            <a href="https://wa.me/5521998356217?text=Olá, gostaria de agendar um Permanente Afro" class="btn btn-outline-dark mt-auto">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-card">
+                        <img src="Botox Capilar 2.jpg" class="service-img" alt="Resultado Botox">
+                        <div class="service-body">
+                            <h3>Botox Capilar</h3>
+                            <p class="price">R$ 80,00</p>
+                            <p>Reposição de massa, redução de frizz e hidratação profunda.</p>
+                            <a href="https://wa.me/5521998356217?text=Olá, gostaria de agendar um Botox" class="btn btn-outline-dark mt-auto">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-card">
+                        <img src="Relaxamento (Alongamento dos Cachos).jpg" class="service-img" alt="Resultado Relaxamento">
+                        <div class="service-body">
+                            <h3>Relaxamento (Alongamento)</h3>
+                            <p class="price">R$ 80,00</p>
+                            <p>Soltura dos cachos proporcionando balanço e facilidade no dia a dia.</p>
+                            <a href="https://wa.me/5521998356217?text=Olá, gostaria de agendar um Relaxamento" class="btn btn-outline-dark mt-auto">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-card">
+                        <img src="Escova com Hidratação 1.jpg" class="service-img" alt="Resultado Escova">
+                        <div class="service-body">
+                            <h3>Escova com Hidratação</h3>
+                            <p class="price">R$ 60,00</p>
+                            <p>Finalização impecável aliada ao tratamento dos fios.</p>
+                            <a href="https://wa.me/5521998356217?text=Olá, gostaria de agendar uma Escova com Hidratação" class="btn btn-outline-dark mt-auto">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-4 col-sm-6">
+                    <div class="service-card">
+                        <img src="Hidratação Profunda 1.jpg" class="service-img" alt="Resultado Hidratação">
+                        <div class="service-body">
+                            <h3>Hidratação Profunda (Ozônio)</h3>
+                            <p class="price">R$ 40,00</p>
+                            <p>Tratamento intensivo com vapor de ozônio para recuperar a saúde capilar.</p>
+                            <a href="https://wa.me/5521998356217?text=Olá, gostaria de agendar uma Hidratação" class="btn btn-outline-dark mt-auto">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 mx-auto">
+                    <div class="service-card">
+                        <div class="d-flex align-items-center justify-content-center bg-light" style="height: 250px;">
+                            <i class="fas fa-cut fa-5x" style="color: #d4af37;"></i>
+                        </div>
+                        <div class="service-body">
+                            <h3>Corte Feminino</h3>
+                            <p class="price">A partir de R$ 30,00</p>
+                            <p>Cortes modernos para renovar seu visual.</p>
+                            <a href="https://wa.me/5521998356217?text=Olá, gostaria de agendar um Corte" class="btn btn-outline-dark mt-auto">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nosso Processo e Resultados</h2>
+                <p>Confira a dedicação em cada etapa do tratamento.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 gallery-item">
+                    <img src="Permanente Afro.jpg" class="gallery-img shadow" alt="Processo Permanente">
+                    <p class="gallery-caption">Processo: Permanente Afro</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="Hidratação Profunda 2.jpg" class="gallery-img shadow" alt="Processo Ozônio">
+                    <p class="gallery-caption">Tecnologia: Vapor de Ozônio</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="Progressiva 1.jpg" class="gallery-img shadow" alt="Processo Progressiva">
+                    <p class="gallery-caption">Aplicação: Progressiva</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="Relaxamento (Alongamento dos Cachos) 2.jpg" class="gallery-img shadow" alt="Processo Relaxamento">
+                    <p class="gallery-caption">Aplicação: Relaxamento</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="Botox Capilar 1.jpg" class="gallery-img shadow" alt="Processo Botox">
+                    <p class="gallery-caption">Aplicação: Botox Capilar</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="Escova com Hidratação 2.jpg" class="gallery-img shadow" alt="Resultado Escova">
+                    <p class="gallery-caption">Resultado: Cabelos tratados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-padding" style="background-color: #333; color: white;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4">
+                    <h2>Entre em Contato</h2>
+                    <p>Estamos prontos para atender você e transformar o seu visual.</p>
+                    <br>
+                    <p><i class="fab fa-whatsapp me-2"></i> <strong>WhatsApp:</strong> (21) 99835-6217</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> <strong>Localização:</strong> Rio de Janeiro - RJ</p>
+                    <a href="https://wa.me/5521998356217" class="btn btn-custom mt-3">Chamar no WhatsApp</a>
+                </div>
+	    	<div class="col-md-6">
+    		    <div style="background: white; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        	        <h5 style="color:#333; text-align:center; margin-bottom:10px;">Tabela de Valores</h5>
+        		<img src="tabela.jpg" style="width:100%; border-radius:5px; display: block;" alt="Tabela de Preços">
+    		    </div>
+		</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h4>Ana Cabelereira e Estética</h4>
+            <p>Realçando sua beleza, elevando sua autoestima.</p>
+            <p class="small mt-4">&copy; 2023 Ana Cabelereira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5521998356217" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
