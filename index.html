@@ -49,7 +49,7 @@
 
         /* Hero Section (Banner Principal) */
         .hero {
-            /* Imagem de fundo */
+            /* Usando corte2.png no fundo com sobreposição escura */
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('corte2.png'); 
             background-size: cover;
             background-position: center;
@@ -109,28 +109,36 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            border-top: 4px solid var(--primary-color); /* Detalhe dourado no topo */
+            border-top: none; /* Removemos a borda superior pois agora tem imagem */
         }
         .service-card:hover {
             transform: translateY(-5px);
         }
         
+        /* Estilo da Imagem do Serviço */
+        .service-img {
+            height: 250px;
+            object-fit: cover; /* Garante que a foto preencha o espaço sem distorcer */
+            width: 100%;
+        }
+
         .service-body {
-            padding: 30px 25px;
+            padding: 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            text-align: center;
+            text-align: left;
         }
         .service-body h3 {
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
         }
         .price {
             color: var(--primary-color);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin: 10px 0 20px 0;
+            margin: 5px 0 15px 0;
         }
 
         /* Footer */
@@ -213,6 +221,7 @@
                 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
+                        <img src="Progressiva 2.jpg" class="service-img" alt="Resultado Progressiva">
                         <div class="service-body">
                             <h3>Progressiva</h3>
                             <p class="price">A partir de R$ 130,00</p>
@@ -224,6 +233,7 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
+                        <img src="Permanente Afro 2.jpg" class="service-img" alt="Resultado Permanente Afro">
                         <div class="service-body">
                             <h3>Permanente Afro</h3>
                             <p class="price">A partir de R$ 150,00</p>
@@ -235,6 +245,7 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
+                        <img src="Botox Capilar 2.jpg" class="service-img" alt="Resultado Botox">
                         <div class="service-body">
                             <h3>Botox Capilar</h3>
                             <p class="price">A partir de R$ 80,00</p>
@@ -246,6 +257,7 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
+                        <img src="Relaxamento (Alongamento dos Cachos) 2.jpg" class="service-img" alt="Resultado Relaxamento">
                         <div class="service-body">
                             <h3>Relaxamento</h3>
                             <p class="price">A partir de R$ 80,00</p>
@@ -257,6 +269,7 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
+                        <img src="Escova com Hidratação 2.jpg" class="service-img" alt="Resultado Escova">
                         <div class="service-body">
                             <h3>Escova com Hidratação</h3>
                             <p class="price">A partir de R$ 60,00</p>
@@ -268,6 +281,7 @@
 
                  <div class="col-md-4 col-sm-6">
                     <div class="service-card">
+                        <img src="Hidratação Profunda 2.jpg" class="service-img" alt="Resultado Hidratação">
                         <div class="service-body">
                             <h3>Hidratação Profunda</h3>
                             <p class="price">A partir de R$ 40,00</p>
@@ -279,6 +293,7 @@
                 
                 <div class="col-md-4 col-sm-6 mx-auto">
                     <div class="service-card">
+                        <img src="corte2.png" class="service-img" style="object-fit: contain; padding: 10px;" alt="Corte Feminino">
                         <div class="service-body">
                             <h3>Corte Feminino</h3>
                             <p class="price">A partir de R$ 30,00</p>
