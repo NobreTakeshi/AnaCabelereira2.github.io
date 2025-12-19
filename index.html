@@ -49,11 +49,11 @@
 
         /* Hero Section (Banner Principal) */
         .hero {
-            /* Usando a imagem de corte no banner principal */
+            /* Imagem de fundo */
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('corte2.png'); 
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 70vh; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -98,6 +98,8 @@
             font-size: 2.5rem;
             margin-bottom: 15px;
         }
+        
+        /* Cartões de Serviço */
         .service-card {
             background: #fff;
             border-radius: 10px;
@@ -107,43 +109,28 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            border-top: 4px solid var(--primary-color); /* Detalhe dourado no topo */
         }
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
-        .service-img {
-            height: 250px;
-            object-fit: cover; /* Garante que a foto preencha sem distorcer */
-            width: 100%;
-        }
+        
         .service-body {
-            padding: 25px;
+            padding: 30px 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
+            text-align: center;
+        }
+        .service-body h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
         }
         .price {
             color: var(--primary-color);
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin: 10px 0;
-        }
-
-        /* Galeria Processo vs Resultado */
-        .gallery-item {
-            margin-bottom: 30px;
-        }
-        .gallery-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        .gallery-caption {
-            text-align: center;
-            margin-top: 10px;
-            font-style: italic;
+            margin: 10px 0 20px 0;
         }
 
         /* Footer */
@@ -193,7 +180,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Salão Beauty & Style</a>
+            <a class="navbar-brand" href="#">ANA | Cabelereira</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -201,7 +188,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
             </div>
@@ -227,7 +213,6 @@
                 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
-                        <img src="Progressiva 2.jpg" class="service-img" alt="Resultado Progressiva">
                         <div class="service-body">
                             <h3>Progressiva</h3>
                             <p class="price">A partir de R$ 130,00</p>
@@ -239,7 +224,6 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
-                        <img src="Permanente Afro 2.jpg" class="service-img" alt="Resultado Permanente Afro">
                         <div class="service-body">
                             <h3>Permanente Afro</h3>
                             <p class="price">A partir de R$ 150,00</p>
@@ -251,7 +235,6 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
-                        <img src="Botox Capilar 2.jpg" class="service-img" alt="Resultado Botox">
                         <div class="service-body">
                             <h3>Botox Capilar</h3>
                             <p class="price">A partir de R$ 80,00</p>
@@ -263,7 +246,6 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
-                        <img src="Relaxamento (Alongamento dos Cachos) 2.jpg" class="service-img" alt="Resultado Relaxamento">
                         <div class="service-body">
                             <h3>Relaxamento</h3>
                             <p class="price">A partir de R$ 80,00</p>
@@ -275,7 +257,6 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
-                        <img src="Escova com Hidratação 2.jpg" class="service-img" alt="Resultado Escova">
                         <div class="service-body">
                             <h3>Escova com Hidratação</h3>
                             <p class="price">A partir de R$ 60,00</p>
@@ -287,7 +268,6 @@
 
                  <div class="col-md-4 col-sm-6">
                     <div class="service-card">
-                        <img src="Hidratação Profunda 2.jpg" class="service-img" alt="Resultado Hidratação">
                         <div class="service-body">
                             <h3>Hidratação Profunda</h3>
                             <p class="price">A partir de R$ 40,00</p>
@@ -299,7 +279,6 @@
                 
                 <div class="col-md-4 col-sm-6 mx-auto">
                     <div class="service-card">
-                        <img src="corte2.png" class="service-img" style="object-fit: contain; padding: 10px;" alt="Corte Feminino">
                         <div class="service-body">
                             <h3>Corte Feminino</h3>
                             <p class="price">A partir de R$ 30,00</p>
@@ -309,41 +288,6 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <section id="galeria" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Galeria de Processos</h2>
-                <p>Veja detalhes da aplicação e texturas dos nossos procedimentos.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-4 gallery-item">
-                    <img src="Permanente Afro.jpg" class="gallery-img shadow" alt="Processo Permanente">
-                    <p class="gallery-caption">Processo: Permanente Afro</p>
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="Hidratação Profunda 1.jpg" class="gallery-img shadow" alt="Processo Hidratação">
-                    <p class="gallery-caption">Aplicação: Hidratação</p>
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="Progressiva 1.jpg" class="gallery-img shadow" alt="Processo Progressiva">
-                    <p class="gallery-caption">Aplicação: Progressiva</p>
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="Relaxamento (Alongamento dos Cachos).jpg" class="gallery-img shadow" alt="Processo Relaxamento">
-                    <p class="gallery-caption">Aplicação: Relaxamento</p>
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="Botox Capilar 1.jpg" class="gallery-img shadow" alt="Processo Botox">
-                    <p class="gallery-caption">Aplicação: Botox Capilar</p>
-                </div>
-                <div class="col-md-4 gallery-item">
-                    <img src="Escova com Hidratação 1.jpg" class="gallery-img shadow" alt="Processo Escova">
-                    <p class="gallery-caption">Processo: Escova</p>
-                </div>
             </div>
         </div>
     </section>
@@ -375,7 +319,7 @@
 
     <footer>
         <div class="container text-center">
-            <h4>Salão Beauty & Style</h4>
+            <h4>ANA | Cabelereira</h4>
             <p>Realçando sua beleza, elevando sua autoestima.</p>
             <p class="small mt-4">&copy; 2025 ANA | Cabelereira. Todos os direitos reservados.</p>
         </div>
